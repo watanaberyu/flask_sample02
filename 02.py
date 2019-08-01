@@ -22,5 +22,11 @@ def omikuji():
     return render_template("omikuji.html", results=results)
 
 
+@app.route("/dice")
+def dice():
+    results = random.choice([1, 2, 3, 4, 5, 6])
+    return render_template("dice.html", results=results)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
